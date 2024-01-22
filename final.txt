@@ -1,0 +1,39 @@
+TITLE: 
+Jordan King
+CSCI200 Section A
+Microsoft Paint But Better (Because I Made It)
+
+PROBLEM DESCRIPTION: I created a program that allows the user to freely draw on a 
+blank canvas using the mouse. The user will be able to change the color of the brush by clicking
+on the color they would like in the bar at the top of the canvas. To draw, the user will left 
+on the mouse and hold down. When the user closes the SFML window, their drawing will be saved 
+as a .png file.
+
+PROGRAM DOCUMENTATION: This program needs to be built with SFML. To run the program, 
+simply make and the canvas will pop up. Then draw by left clicking on a mouse or keypad,
+and change the color of the brush by clicking on a color in the color bar at the top of the window.
+Features I wanted to include but ran out of time:
+- change brush size via scrolling with the mouse
+    - I would have done this by using the wheelscroll mouse event and connecting that to the radius of 
+    the brush
+- change shape of the brush
+    - I would have made another section at the top of the window with different brush shapes, by clicking 
+    on one it would change the brush shape
+
+LIST DATA STRUCTURE: I chose to use a vector because I wanted to make a list of class types (in this case, 
+the CircleShape class) and found it easiest to use a vector. The vector I used essentially equated to the "stroke" 
+of the brush, so every time the x and y position of the brush changed, the brush was appended to the vector, and then 
+the vector was looped through to draw each position of the brush.
+
+TESTS: Clicking on the center of the color to change brush color is ideal. However, if you click right on the edge or even
+above the desired color, the brush will still change to that color. Moving the mouse at a reasonable speed (not too 
+fast) is also ideal, as I am appending the brush locations to a vector and the drawing that, so it will not quite
+keep up if you move the mouse too fast (there will be gaps). This is a fairly simple drawing application.
+
+REFLECTIONS: I learned a lot about SFML while making this project. Mouse events make a lot of sense to me, so 
+applying those was not an issue. I had trouble at first with actually getting the drawing part working, but 
+it makes sense that you basically have to create a bunch of shapes for every position of the mouse. I definitely 
+am going to continue to work on this, as I did not get nearly as much done as I wanted to and it was actually 
+really fun to work on. I will most likely make a brush class because I think that would make things easier and allow
+me to manipulate more aspects of the program in a better way. 
+
